@@ -1,0 +1,75 @@
+
+
+:root {
+  
+  --server-sidebar-w: 78px;
+  --ctx-sidebar-w: 280px;
+  --profile-bar-w: calc(var(--server-sidebar-w) + 4px + var(--ctx-sidebar-w));
+
+  
+  --bg-deep:         #1D151D;
+  --bg-main:         #261C26;
+  --bg-panel:        #2A1F2A;
+  --bg-panel-dark:   #221922;
+  --bg-window:       #2E2230;
+  --bg-elevated:     #352635;
+
+  
+  --blue-main:       #1B4E61;
+  --blue-light:      #247BA0;
+  --blue-hover:      #3090BA;
+
+  
+  --yellow:          #FFE066;
+  --yellow-light:    #FFF099;
+  --orange:          #F2803A;
+  --red:             #F25F5C;
+  --red-light:       #FF9C9A;
+
+  
+  --text-main:       #EAEAEA;
+  --text-soft:       #B0A0B8;
+  --text-muted:      #7A6880;
+
+  
+  --border-dark:     #111111;
+  --border-soft:     #3A2A3A;
+}
+
+
+
+.main-page {
+  height: 100vh;
+  width: 100vw;
+
+  overflow: hidden;
+
+  display: flex;
+
+  background: var(--bg-main);
+
+  color: var(--text-main);
+
+  position: relative;
+}
+
+
+
+.main-right-slot {
+  display: flex;
+  flex-direction: row;
+
+  flex: 1;
+
+  min-width: 0;
+
+  overflow: hidden;
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--yellow);
+  outline-offset: 2px;
+}

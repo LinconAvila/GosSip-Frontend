@@ -1,0 +1,234 @@
+/* =========================================================
+   index.css
+========================================================= */
+
+@import "tailwindcss";
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================================================
+   ROOT THEME
+========================================================= */
+
+:root {
+
+  /* ─── Base ───────────────────────────── */
+
+  --bg-main: #111827;
+  --bg-window: #1A1A26;
+  --bg-panel: #222131;
+  --bg-panel-dark: #171722;
+  --bg-elevated: #2A2838;
+
+  /* ─── Primary ────────────────────────── */
+
+  --blue-main: #146982;
+  --blue-light: #259AA1;
+  --blue-hover: #2FB4BC;
+
+  /* ─── Accent ─────────────────────────── */
+
+  --yellow: #EAA72F;
+  --yellow-light: #FFE39A;
+
+  --orange: #E56E2E;
+
+  --red: #DA3931;
+  --red-light: #FF928C;
+
+  /* ─── Text ───────────────────────────── */
+
+  --text-main: #F4F4F4;
+  --text-soft: #B7C6CC;
+  --text-muted: #8A8FA3;
+  --text-dark: #111111;
+
+  /* ─── Borders ────────────────────────── */
+
+  --border-dark: #000000;
+  --border-soft: #111111;
+
+  /* ─── Offline ────────────────────────── */
+
+  --offline-bg: #242330;
+  --offline-text: #9A98A8;
+  --offline-muted: #77748A;
+}
+
+/* =========================================================
+   BASE
+========================================================= */
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+
+  background: var(--bg-main);
+
+  color: var(--text-main);
+
+  font-family: 'Press Start 2P', cursive;
+
+  -webkit-font-smoothing: none;
+
+  image-rendering: pixelated;
+}
+
+/* =========================================================
+   CURSORS
+========================================================= */
+
+* {
+  cursor:
+    url('https://cur.cursors-4u.net/cursors/cur-1/cur1.cur'),
+    default;
+}
+
+button,
+a,
+[role="button"] {
+  cursor:
+    url('https://cur.cursors-4u.net/cursors/cur-2/cur115.cur'),
+    pointer;
+}
+
+input,
+textarea {
+  cursor:
+    url('https://cur.cursors-4u.net/others/oth-2/oth60.cur'),
+    text;
+}
+
+/* =========================================================
+   TEXT SELECTION
+========================================================= */
+
+::selection {
+  background: var(--yellow);
+  color: #000;
+}
+
+/* =========================================================
+   SCANLINES
+========================================================= */
+
+body::before {
+  content: '';
+
+  position: fixed;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  opacity: 0.12;
+
+  z-index: 99999;
+
+  background-image: repeating-linear-gradient(
+    0deg,
+    rgba(255,255,255,0.04),
+    rgba(255,255,255,0.04) 2px,
+    transparent 2px,
+    transparent 4px
+  );
+}
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-window);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--yellow);
+  border: 2px solid var(--border-dark);
+}
+
+/* =========================================================
+   GLOBAL RETRO HELPERS
+========================================================= */
+
+.retro-window {
+  background: var(--bg-window);
+
+  border: 4px solid var(--border-dark);
+
+  border-top-color: var(--yellow);
+  border-left-color: var(--yellow);
+
+  box-shadow: 10px 10px 0 var(--border-dark);
+}
+
+.retro-titlebar {
+  height: 54px;
+
+  background: var(--blue-main);
+
+  border-bottom: 4px solid var(--border-dark);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 14px;
+}
+
+.retro-divider {
+  height: 4px;
+
+  background: #111;
+
+  border-top: 2px solid var(--yellow);
+}
+
+.retro-btn {
+  background: var(--blue-light);
+
+  border: 3px solid var(--border-dark);
+
+  border-top-color: #7AD8DE;
+  border-left-color: #7AD8DE;
+
+  color: var(--text-main);
+
+  font-family: inherit;
+
+  box-shadow: 4px 4px 0 var(--border-dark);
+
+  transition: 0.08s;
+
+  cursor: pointer;
+}
+
+.retro-btn:hover {
+  background: var(--blue-hover);
+}
+
+.retro-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: none;
+}

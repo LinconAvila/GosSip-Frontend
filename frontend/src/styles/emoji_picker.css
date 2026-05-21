@@ -1,0 +1,100 @@
+
+
+.emoji-picker-portal {
+  
+  border: 3px solid var(--border-dark);
+  border-top-color:  var(--yellow);
+  border-left-color: var(--yellow);
+  box-shadow: 6px 6px 0 var(--border-dark);
+  overflow: hidden;
+  
+  box-sizing: border-box;
+}
+
+
+
+.emoji-picker-portal .EmojiPickerReact {
+  border-radius: 0 !important;
+  border:        none !important;
+  box-shadow:    none !important;
+  font-family:   inherit !important;
+  
+  overflow:      hidden !important;
+}
+
+
+
+.emoji-picker-portal .EmojiPickerReact {
+  --epr-bg-color:                       #2D2B3B;
+  --epr-category-label-bg-color:        #261C26;
+  --epr-hover-bg-color:                 #352635;
+  --epr-focus-bg-color:                 #1B4E61;
+  --epr-highlight-color:                #a5a39b;
+  --epr-active-skin-hover-color:        #247BA0;
+
+  --epr-search-input-bg-color:          #1D151D;
+  --epr-search-input-bg-color-active:   #261C26;
+  --epr-search-border-color:            #111111;
+  --epr-search-input-text-color:        #EAEAEA;
+  --epr-search-input-placeholder-color: #7A6880;
+
+  --epr-text-color:                     #EAEAEA;
+  --epr-category-icon-active-color:     #FFE066;
+
+  --epr-border-color:                   #111111;
+  --epr-header-overlay-color:           #2E2230;
+
+  --epr-skin-tone-picker-menu-color:    #352635;
+}
+
+
+
+.emoji-picker-portal .EmojiPickerReact .epr-category-nav button {
+  border-radius: 0 !important;
+}
+
+
+.emoji-picker-portal .EmojiPickerReact .epr-category-nav button.epr-active {
+  border-bottom:  3px solid var(--yellow) !important;
+  border-radius:  0 !important;
+  
+}
+
+
+
+.emoji-picker-portal .EmojiPickerReact .epr-search-container input {
+  border:            2px solid var(--border-dark) !important;
+  border-top-color:  #555 !important;
+  border-left-color: #555 !important;
+  border-radius:     0 !important;
+  font-family:       inherit !important;
+  font-size:         8px !important;
+  letter-spacing:    0.5px;
+}
+
+
+
+.emoji-picker-portal .EmojiPickerReact .epr-emoji-category-label {
+  font-family:    inherit !important;
+  font-size:      7px !important;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color:          var(--text-muted) !important;
+  background:     #261C26 !important;
+  border-bottom:  2px solid var(--border-dark) !important;
+}
+
+
+.emoji-picker-portal .EmojiPickerReact .epr-emoji.epr_iddbfm,
+.emoji-picker-portal .EmojiPickerReact .epr-emoji {
+  overflow: visible !important;
+}
+
+
+.emoji-picker-portal .EmojiPickerReact .epr-emoji-category-content {
+  overflow: hidden !important;
+}
+
+.emoji-picker-portal .EmojiPickerReact .epr-body {
+  overflow-x: hidden !important;
+}
