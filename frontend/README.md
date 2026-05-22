@@ -1,73 +1,80 @@
-# React + TypeScript + Vite
+# GosSip Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+GosSip is the client-side component of the GosSip chat system, featuring a unique retro aesthetic inspired by Windows 95. It is a modern Single Page Application (SPA) built with React 19 and Vite, providing a seamless real-time communication experience through WebSockets and a RESTful API.
 
-Currently, two official plugins are available:
+## Design Concept
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The UI is a faithful emulation of the Windows 95 environment. This choice serves as both a stylistic statement and a technical challenge in User Experience (UX), proving that modern technologies like React's Virtual DOM and asynchronous state updates can be encapsulated within a classic, tactile design without sacrificing responsiveness or fluidity.
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Framework:** React 19
+- **Build Tool:** Vite 8
+- **Styling:** Tailwind CSS 4
+- **State Management:** Zustand
+- **Routing:** React Router 7
+- **Communication:** Axios (REST) & Native WebSocket API
+- **Icons:** Lucide React
+- **Validation:** Zod & React Hook Form
 
-## Expanding the ESLint configuration
+## Key Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Retro UI:** Windows 95-inspired windows, taskbars, and icons.
+- **Real-Time Chat:** Bidirectional communication via WebSockets for instant messaging.
+- **Global Notifications:** Centralized inbox for friend requests and system alerts.
+- **Presence Tracking:** Real-time online/offline status and typing indicators.
+- **Dynamic Theming:** Avatar color customization and user profile management.
+- **Friendship System:** Integrated friend request management and private messaging.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Getting Started
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Prerequisites
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Node.js (Latest LTS recommended)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository (if not already done):
+   ```bash
+   git clone git@github.com:LinconAvila/GosSip-Frontend.git
+   cd GosSip-Frontend/frontend
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Environment Configuration:
+   Create a `.env` file in the root of the `frontend/` directory:
+   ```env
+   VITE_API_URL=http://localhost:8080/api/v1
+   VITE_WS_URL=ws://localhost:8080/ws
+   ```
+
+### Development
+
+Start the development server:
+```bash
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Build for Production
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Build the project for production:
+```bash
+npm run build
 ```
+
+The output will be available in the `dist/` directory, ready to be served by Nginx or any static hosting service.
+
+## Project Structure
+
+- `src/components`: UI components (Windows, Buttons, Modals).
+- `src/hooks`: Custom React hooks for WebSockets and API calls.
+- `src/store`: Global state management with Zustand (Auth, Chat, UI state).
+- `src/services`: API service definitions using Axios.
+- `src/pages`: Main application views (Login, Desktop, Chat Rooms).
+
+Center of Computational Sciences – Federal University of Rio Grande (FURG)
